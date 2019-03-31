@@ -44,3 +44,7 @@ I also like to defer unneccecary architectural decisions as long they do not nee
 do not expect me to provide a full architecture, or a full grown idea. It will either evolve or die.
 
 That said, please remember this is a private educational project.
+
+## License
+
+Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
