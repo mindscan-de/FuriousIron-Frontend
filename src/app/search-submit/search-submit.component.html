@@ -1,3 +1,12 @@
-<p>
-  search-submit works!
-</p>
+    <div class="row">
+		<div class="col-sm my-4">
+			<form (ngSubmit)="onSubmit()">
+			<div class="input-group mb-3">
+				<input type="text" class="form-control form-control-lg"  placeholder="query" [(ngModel)]="currentQueryString" name="q">
+				<div class="input-group-append">
+					<button class="btn btn-outline-primary btn-lg" type="submit" ><span>Search</span></button>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchSubmitComponent implements OnInit {
 
-  constructor() { }
+	private currentQueryString: string = "";
+	
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
+	onSubmit(): void {
+	}
 }
