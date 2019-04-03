@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-submit',
@@ -10,7 +10,7 @@ export class SearchSubmitComponent implements OnInit {
 
 	private currentQueryString: string = "";
 	
-	constructor( private activatedRoute: ActivatedRoute ) { 
+	constructor( private activatedRoute: ActivatedRoute, private router: Router ) { 
   		// subscribe to page parameters		
   		this.activatedRoute.params.subscribe( pageParameters => {
 	 		this.onContentPageParametersProvided( pageParameters );
@@ -30,5 +30,7 @@ export class SearchSubmitComponent implements OnInit {
 	
 
 	onSubmit(): void {
+		var queryParameterQ = this.currentQueryString;
+		this.router.navigate( [ '/result', {q:queryParameterQ }]);
 	}
 }
