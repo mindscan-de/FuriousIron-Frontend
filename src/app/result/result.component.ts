@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+// Mock
+import { ResultMockService } from './result-mock.service';
+
 // UI-Model
 import { UiModelResultList } from './ui-model/ui-model-result-list';
 import { UiModelResultListItem } from './ui-model/ui-model-result-list-item';
@@ -14,7 +17,9 @@ export class ResultComponent implements OnInit {
 
 	private uiModelResultList: UiModelResultList;
 
-	constructor( private activatedRoute: ActivatedRoute ) {
+	constructor( private activatedRoute: ActivatedRoute, private resultMockService: ResultMockService ) {
+		this.uiModelResultList = new UiModelResultList();
+		  		
   		// subscribe to page parameters		
   		this.activatedRoute.params.subscribe( pageParameters => {
 	 		this.onContentPageParametersProvided( pageParameters );
@@ -22,11 +27,12 @@ export class ResultComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.uiModelResultList = new UiModelResultList();
 	}
 	
 	onContentPageParametersProvided( pageParameters ):void {
 	  	// TODO: create a search engine request for a result for "pageParameters.q"
+	  	
+	  	this.uiModelResultList = this.resultMockService.getResult();
   	}
 	
 
