@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 // UI-Model
 import { UiModelResultList } from './ui-model/ui-model-result-list';
+import { UiModelResultListItem } from './ui-model/ui-model-result-list-item';
 
 @Component({
   selector: 'app-result',
