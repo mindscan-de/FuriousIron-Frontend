@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+// UI-Model
+import { UiModelResultList } from './ui-model/ui-model-result-list';
+
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
+
+	private uiModelResultList: UiModelResultList;
 
 	constructor( private activatedRoute: ActivatedRoute ) {
   		// subscribe to page parameters		
@@ -16,6 +21,7 @@ export class ResultComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		this.uiModelResultList = new UiModelResultList();
 	}
 	
 	onContentPageParametersProvided( pageParameters ):void {

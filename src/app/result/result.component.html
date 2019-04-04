@@ -5,7 +5,16 @@
 	<div class="row">
 		<div class="col-sm my-3">
 			<h1>Search Results</h1>
+			Number of Results: {{uiModelResultList.numberOfItems}}.
 		</div>
 	</div>
+	
+	<ul class="list-group">
+		<li *ngIf="uiModelResultList.numberOfItems==0" class="list-group-item list-group-item-action">
+			<h5 class="mb-1">No Results found</h5>
+			<p class="mb-1">
+			</p>
+		</li>
+	</ul>
 
 </div>
