@@ -15,6 +15,15 @@
 			<p class="mb-1">
 			</p>
 		</li>
+		<li *ngFor="let searchResult of uiModelResultList.items; let i = index" class="list-group-item list-group-item-action" >
+			<span class="badge badge-success">{{searchResult.versionLabel}}</span><span class="small p-3 mb-2 text-secondary">{{searchResult.path}}</span>
+			<h5 class="mb-1">{{searchResult.simpleFilename}}</h5>
+			<p class="mb-1"> 
+			{{searchResult.teaserText}}
+			</p>
+			<a href="/">link to main search page</a>
+		</li>	
+		
 	</ul>
 
 </div>
