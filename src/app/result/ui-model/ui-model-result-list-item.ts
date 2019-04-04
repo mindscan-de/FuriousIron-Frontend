@@ -7,7 +7,7 @@ export class UiModelResultListItem {
 	
 	constructor(simpleFilename: string, path:string) {
 		this.simpleFilename = simpleFilename;
-		this.teaserResultText = "query = 'foo' this is a simple teaser, but be sure to click on that item, if you find this description useful.";
+		this.teaserText = "query = 'foo' this is a simple teaser, but be sure to click on that item, if you find this description useful.";
 		this.versionLabel = "current";
 		this.path = path;
 	}
