@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SearchComponent } from './search/search.component';
 import { ResultComponent } from './result/result.component';
+import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
     { path: '', component: SearchComponent },
     { path: 'search', component: SearchComponent },
-    { path: 'result', component: ResultComponent }
+    { path: 'result', component: ResultComponent },
+    { path: 'detail', component: DetailComponent }
 ];
 
 @NgModule({

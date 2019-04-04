@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 // Mock
 import { ResultMockService } from './result-mock.service';
@@ -17,7 +17,7 @@ export class ResultComponent implements OnInit {
 
 	private uiModelResultList: UiModelResultList;
 
-	constructor( private activatedRoute: ActivatedRoute, private resultMockService: ResultMockService ) {
+	constructor( private activatedRoute : ActivatedRoute, private router : Router, private resultMockService : ResultMockService ) {
 		this.uiModelResultList = new UiModelResultList();
 		  		
   		// subscribe to page parameters		
@@ -35,5 +35,13 @@ export class ResultComponent implements OnInit {
 	  	this.uiModelResultList = this.resultMockService.getResult();
   	}
 	
+
+	onSelectSearchResult( item : UiModelResultListItem ) {
+	  	var path = item.path;
+	  	var versionLabel = item.versionLabel;
+	  	var fileName = item.simpleFilename;
+	  	
+	  	this.router.navigate(["/detail", {p:path, f: fileName, v: versionLabel } ]);
+	}
 
 }
