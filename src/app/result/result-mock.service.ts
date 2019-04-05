@@ -22,8 +22,8 @@ export class ResultMockService {
 			new UiModelResultListItem("C.java", "FuriousIron/src/de/mindscan/furiousiron"),
 			new UiModelResultListItem("AC.java", "FuriousIron/src/de/mindscan/furiousiron/a"),
 			new UiModelResultListItem("ABB.java", "FuriousIron/src/de/mindscan/furiousiron/a"),
-			new UiModelResultListItem("foo.txt", "FuriousIron"),
-			new UiModelResultListItem("README.MD", "FuriousIron")
+			new UiModelResultListItem("detail.component.ts.txt", "FuriousIron"),
+			new UiModelResultListItem("README.md", "FuriousIron")
 		);
 		
 		return mockedResult;

@@ -13,6 +13,6 @@ export class SearchBackendService {
   
 	getFileContent ( path : string, filename : string ) : Observable<string> {
 		// return this.httpClient.get ( this._cachedSourceFilesLocation + "/" + path + "/" + filename, { responseType: 'text'} );
-		return this.httpClient.get ( this._cachedSourceFilesLocation + "/README.md", { responseType: 'text'} );
+		return this.httpClient.get ( this._cachedSourceFilesLocation + "/" + filename, { responseType: 'text'} );
 	}
 }
