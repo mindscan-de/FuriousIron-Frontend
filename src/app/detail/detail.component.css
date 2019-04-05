@@ -1,0 +1,9 @@
+code, kbd, pre, samp {
+    font-family: "Courier New",monospace;
+    /* font-size: 1em; */
+}
+
+.pre-scrollable {
+    max-height: none;
+    overflow-y: scroll;
+}
