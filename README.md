@@ -47,4 +47,4 @@ That said, please remember this is a private educational project.
 
 ## License
 
-Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
+Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
