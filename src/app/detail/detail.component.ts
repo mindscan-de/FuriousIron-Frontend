@@ -37,14 +37,19 @@ export class DetailComponent implements OnInit {
 		this.fileMetaData = new UiModelFileMetaData( path , file );
 		
 		this.searchBackend.getFileContent( path, file ).subscribe(
-			data => this.onFileContentProvided(data),
-			error => console.log(error)
+			data => this.onFileContentProvided( data ),
+			error => this.onFileConentNotProvided( error )
 		);
 	}
 
 	onFileContentProvided( fileContent ) : void {
 		this.fileContent = new UiModelFileContent( fileContent );
 	}
+	
+	onFileConentNotProvided( error ) : void {
+		this.fileContent = new UiModelFileContent( "The file you asked for could not be retrieved." );
+	}
+	
 
   ngOnInit() {
   }
