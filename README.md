@@ -27,13 +27,13 @@ or crawl private or commercial code basis.
 To later work on the search engine I would like to have a minimal viable product with the following
 requirements:
 
-* Query field
-* Use REST to find results
-* Presentation of result list (non paginated)
-* Provide link to detail view of source file
-* Using REST to retrieve source file
-* basic syntax highlighting
-* URL's which can be bookmarked
+* Query field [done]
+* Use REST to find results [done] (a.t.m. till system boundary)
+* Presentation of result list (non paginated) [done]
+* Provide link to detail view of source file [done]
+* Using REST to retrieve source file [done] (a.t.m. till system boundary)
+* basic syntax highlighting [done]
+* URL's which can be bookmarked [done]
 
 Simplicity is key. Because you can change a mimimal product much faster and adapt that to your needs,
 as your needs begin to grow. Because I prefer having a whole pipeline working, the goal is to not 
