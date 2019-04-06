@@ -31,8 +31,7 @@ export class ResultComponent implements OnInit {
 	}
 	
 	onContentPageParametersProvided( pageParameters ):void {
-	  	// TODO: create a search engine request for a result for "pageParameters.q"
-	  	this.searchBackend.getQueryResults( "" ).subscribe(
+	  	this.searchBackend.getQueryResults( pageParameters.q ).subscribe(
 		  	data => this.onQueryResultAvailable (data),
 		  	error => this.onQueryResultError(error)
 	  	);
