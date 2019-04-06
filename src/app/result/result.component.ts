@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-// Mock
-import { ResultMockService } from './result-mock.service';
+// Services
+import { SearchBackendService } from '../backend-service/search-backend.service';
+import { Model2ModelService } from '../m2m/model-2-model.service';
 
 // UI-Model
 import { UiModelResultList } from './ui-model/ui-model-result-list';
@@ -17,7 +18,7 @@ export class ResultComponent implements OnInit {
 
 	private uiModelResultList: UiModelResultList;
 
-	constructor( private activatedRoute : ActivatedRoute, private router : Router, private resultMockService : ResultMockService ) {
+	constructor( private activatedRoute : ActivatedRoute, private router : Router, private searchBackend : SearchBackendService , private m2m : Model2ModelService ) {
 		this.uiModelResultList = new UiModelResultList();
 		  		
   		// subscribe to page parameters		
@@ -31,12 +32,24 @@ export class ResultComponent implements OnInit {
 	
 	onContentPageParametersProvided( pageParameters ):void {
 	  	// TODO: create a search engine request for a result for "pageParameters.q"
-	  	
-	  	this.uiModelResultList = this.resultMockService.getResult();
+	  	this.searchBackend.getQueryResults( "" ).subscribe(
+		  	data => this.onQueryResultAvailable (data),
+		  	error => this.onQueryResultError(error)
+	  	);
+  	}
+  	
+  	onQueryResultAvailable( queryResult ) : void {
+  		this.uiModelResultList = this.m2m.transformQueryResultToUI(queryResult);
+  	}
+  	
+  	onQueryResultError( error ) : void {
+  		console.log(error);
+  	
+  		this.uiModelResultList = new UiModelResultList();
   	}
 	
 
-	onSelectSearchResult( item : UiModelResultListItem ) {
+	onSelectSearchResult( item : UiModelResultListItem ) : void {
 	  	var path = item.path;
 	  	var versionLabel = item.versionLabel;
 	  	var fileName = item.simpleFilename;
