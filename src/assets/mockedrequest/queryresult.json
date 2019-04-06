@@ -1,0 +1,13 @@
+{
+	"numberOfQeueryResults" : 2,
+	"queryResultItems" : [
+		{
+			"queryResultSimpleFilename": "README.md",
+			"queryResultFilePath": "FuriousIron"
+		},
+		{
+			"queryResultSimpleFilename": "detail.component.ts.txt",
+			"queryResultFilePath": "FuriousIron"
+		}
+	]
+}
