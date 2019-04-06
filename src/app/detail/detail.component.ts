@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 // Service
 import { SearchBackendService } from '../backend-service/search-backend.service';
+import { Model2ModelService } from '../m2m/model-2-model.service';
 
 // UI-Model
 import { UiModelFileContent } from './ui-model/ui-model-file-content';
@@ -19,7 +20,7 @@ export class DetailComponent implements OnInit {
 	private fileMetaData : UiModelFileMetaData;
 	private fileContent : UiModelFileContent;
 
-	constructor( private activatedRoute : ActivatedRoute , private searchBackend : SearchBackendService ) {
+	constructor( private activatedRoute : ActivatedRoute , private searchBackend : SearchBackendService , private m2m : Model2ModelService ) {
 		this.fileMetaData = new UiModelFileMetaData("","");
 		this.fileContent = new UiModelFileContent("");
 	
@@ -43,7 +44,7 @@ export class DetailComponent implements OnInit {
 	}
 
 	onFileContentProvided( fileContent ) : void {
-		this.fileContent = new UiModelFileContent( fileContent );
+		this.fileContent = this.m2m.transformFileContentToUI( fileContent );
 	}
 	
 	onFileConentNotProvided( error ) : void {
