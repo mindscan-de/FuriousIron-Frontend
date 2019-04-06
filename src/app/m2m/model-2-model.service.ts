@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
 
+// Backend-Models 
+import { BackendModelQueryResult } from '../backend-service/search-model/backend-model-query-result';
+
+// UI-Models
 import { UiModelFileContent } from '../detail/ui-model/ui-model-file-content';
+import { UiModelResultListItem } from '../result/ui-model/ui-model-result-list-item';
+import { UiModelResultList } from '../result/ui-model/ui-model-result-list';
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +17,19 @@ export class Model2ModelService {
   
 	transformFileContentToUI( fileContent ) : UiModelFileContent {
 		return new UiModelFileContent( fileContent );
+	}
+	
+	transformQueryResultToUI( queryResult : BackendModelQueryResult ) : UiModelResultList {
+		var uiResult = new UiModelResultList ();
+		
+		uiResult.numberOfItems = queryResult.numberOfQeueryResults;
+		for( let queryItem of queryResult.queryResultItems ) {
+			var simpleFilename = queryItem.queryResultSimpleFilename;
+			var path = queryItem.queryResultFilePath;
+		
+			uiResult.items.push( new UiModelResultListItem( simpleFilename, path ) );
+		}
+		
+		return uiResult;
 	}
 }
