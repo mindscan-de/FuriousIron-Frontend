@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "http://localhost:8080/SearchBackend/rest/search/",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

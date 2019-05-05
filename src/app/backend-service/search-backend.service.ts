@@ -10,7 +10,9 @@ import { BackendModelQueryResult } from './search-model/backend-model-query-resu
 export class SearchBackendService {
 
 	private _cachedSourceFilesLocation = "/assets/mockedfiles";
-	private _mockedQueryResultsLocation = "/assets/mockedrequest/queryresult.json";
+	// private _mockedQueryResultsLocation = "/assets/mockedrequest/queryresult.json";
+	
+	private _mockedQueryResultsLocation = "/api/myqueryString";
 
 	constructor( private httpClient : HttpClient ) { }
   

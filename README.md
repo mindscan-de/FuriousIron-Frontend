@@ -45,6 +45,10 @@ do not expect me to provide a full architecture, or a full grown idea. It will e
 
 That said, please remember this is a private educational project.
 
+## Running
+
+Run this SearchFrontend via `ng serve --proxy-config=proxy.conf.json` then visit http://localhost:4200
+
 ## License
 
 Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
