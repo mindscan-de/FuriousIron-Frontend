@@ -13,7 +13,7 @@ export class SearchBackendService {
 	private _cachedSourceFilesLocation = "/assets/mockedfiles";
 	// private _mockedQueryResultsLocation = "/assets/mockedrequest/queryresult.json";
 	
-	private _mockedQueryResultsLocation = "/api/query/result;q=123";
+	private _mockedQueryResultsLocation = "/api/query/result";
 
 	constructor( private httpClient : HttpClient ) { }
   
@@ -23,6 +23,9 @@ export class SearchBackendService {
 	}
 	
 	getQueryResults ( query : string ) : Observable<BackendModelQueryResult> {
-		return this.httpClient.get<BackendModelQueryResult>( this._mockedQueryResultsLocation ); 
+	    let params = new HttpParams();
+	    params=params.append('q', query);
+	
+		return this.httpClient.get<BackendModelQueryResult>( this._mockedQueryResultsLocation, { params:params} ); 
 	}
 }
