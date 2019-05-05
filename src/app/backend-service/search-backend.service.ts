@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 import { BackendModelQueryResult } from './search-model/backend-model-query-result';
@@ -12,7 +13,7 @@ export class SearchBackendService {
 	private _cachedSourceFilesLocation = "/assets/mockedfiles";
 	// private _mockedQueryResultsLocation = "/assets/mockedrequest/queryresult.json";
 	
-	private _mockedQueryResultsLocation = "/api/myqueryString";
+	private _mockedQueryResultsLocation = "/api/query/result;q=123";
 
 	constructor( private httpClient : HttpClient ) { }
   
