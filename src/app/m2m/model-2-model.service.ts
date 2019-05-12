@@ -28,8 +28,9 @@ export class Model2ModelService {
 			var path = queryItem.queryResultFilePath;
 			var numberOfLines = queryItem.numberOfLinesInFile;
 			var fileSize = queryItem.fileSize;
+			var map = queryItem.classifierMap;
 		
-			uiResult.items.push( new UiModelResultListItem( simpleFilename, path, numberOfLines, fileSize ) );
+			uiResult.items.push( new UiModelResultListItem( simpleFilename, path, numberOfLines, fileSize, map ) );
 		}
 		
 		return uiResult;
