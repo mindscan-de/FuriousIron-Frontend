@@ -21,7 +21,11 @@
 			<p class="mb-1"> 
 			{{searchResult.teaserText}}
 			</p>
-			<a href="/">link to main search page</a>
+			<ul>
+			<li><span class="badge badge-primary">lines: {{searchResult.numberOfLines}}</span></li>
+			<li><span class="badge badge-primary">filesize: {{searchResult.fileSize}}</span>
+			</li>
+			</ul>
 		</li>	
 		
 	</ul>

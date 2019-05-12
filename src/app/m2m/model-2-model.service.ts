@@ -26,8 +26,10 @@ export class Model2ModelService {
 		for( let queryItem of queryResult.queryResultItems ) {
 			var simpleFilename = queryItem.queryResultSimpleFilename;
 			var path = queryItem.queryResultFilePath;
+			var numberOfLines = queryItem.numberOfLinesInFile;
+			var fileSize = queryItem.fileSize;
 		
-			uiResult.items.push( new UiModelResultListItem( simpleFilename, path ) );
+			uiResult.items.push( new UiModelResultListItem( simpleFilename, path, numberOfLines, fileSize ) );
 		}
 		
 		return uiResult;
