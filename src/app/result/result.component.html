@@ -23,6 +23,7 @@
 			</p>
 			<span class="badge badge-pill badge-secondary">{{searchResult.numberOfLines}} Lines </span>
 			<span class="badge badge-pill badge-light">{{searchResult.fileSize}} Byte </span>
+			<span *ngIf="searchResult.classifierMap['unit-test']=='true'" class="badge badge-pill badge-warning">unittest</span>
 		</li>	
 		
 	</ul>
