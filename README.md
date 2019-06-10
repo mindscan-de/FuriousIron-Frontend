@@ -45,6 +45,10 @@ do not expect me to provide a full architecture, or a full grown idea. It will e
 
 That said, please remember this is a private educational project.
 
+## Overview
+
+![Overview](https://github.com/mindscan-de/FuriousIron-Frontend/raw/master/doc/Overview.png "Architectural Overview")
+
 ## Running
 
 Run this SearchFrontend via `ng serve --proxy-config=proxy.conf.json` then visit http://localhost:4200
