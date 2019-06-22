@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { CustomEncoder } from './custom-encoder';
 
 import { BackendModelQueryResult } from './search-model/backend-model-query-result';
 
@@ -23,9 +24,10 @@ export class SearchBackendService {
 	}
 	
 	getQueryResults ( query : string ) : Observable<BackendModelQueryResult> {
-	    let httpParameters = new HttpParams();
+	    let httpParameters = new HttpParams({encoder: new CustomEncoder()});
 	    httpParameters=httpParameters.append('q', query);
 	
 		return this.httpClient.get<BackendModelQueryResult>( this._queryResultsLocation, { params:httpParameters} ); 
 	}
 }
+
