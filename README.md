@@ -35,15 +35,24 @@ requirements:
 * basic syntax highlighting __[done]__
 * URL's which can be bookmarked __[done]__
 
-Simplicity is key. Because you can change a mimimal product much faster and adapt that to your needs,
+Simplicity is key. Because you can change a minimal product much faster and adapt that to your needs,
 as your needs begin to grow. Because I prefer having a whole pipeline working, the goal is to not 
 spend too much time on gold plating the code you are going to delete at the next iteration, but instead
 having the whole pipeline running as soon as possible, even if it lacks features. 
 
-I also like to defer unneccecary architectural decisions as long they do not need attention. So please
+I also like to defer unnecessary architectural decisions as long they do not need attention. So please
 do not expect me to provide a full architecture, or a full grown idea. It will either evolve or die.
 
 That said, please remember this is a private educational project.
+
+## What needs to be done next
+
+* Indexing .xml files
+* Indexing .pom files
+* URLs of search results can not be used as book mark -> they do not lead to the file content. 
+* URLS of search results should be provided that way, that they can be opened in a new tab
+* caching of the query (until next index-creation or day) and its results should be implemented (frontend and backend)- allows smooth going forth and back in the results and allows pagination of results   
+
 
 ## Overview
 
