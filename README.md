@@ -67,6 +67,14 @@ if there is a simpler solution/way. That helps to lower the technical was well a
 * (Indexer)
   * Indexing .xml files
   * Indexing .pom files (Indexer)
+  
+## Nice to have
+
+I consider the search engine a byproduct for the real use-case. The search-engine should collect data about
+the source-code the user is looking for and should enable further technologies to help the user programming,
+refactoring or debugging.
+
+So my focus is not the search engine as a product, but is the enabler for the more interesting technologies.
 
 ## Overview
 
