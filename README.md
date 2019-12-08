@@ -33,7 +33,8 @@ requirements:
 * Provide link to detail view of source file __[done]__
 * Using REST to retrieve source file __[done]__
 * basic syntax highlighting __[done]__
-* Search URL's which can be bookmarked __[done]__
+* Search URL's can be bookmarked __[done]__
+* Detail URL's can be bookmarked __[done]__
 
 Simplicity is key. Because you can change a minimal product much faster and adapt that to your needs,
 as your needs begin to grow. Because I prefer having a whole pipeline working, the goal is to not 
@@ -55,7 +56,6 @@ if there is a simpler solution/way. That helps to lower the technical was well a
 * Usability
   * Indicate, that a search is still ongoing 
     - with more search terms, there is a major slow down (instead of a speedup), which should be addressed later (I have a solution in mind - different Frontend-Search Execution vs. Backend-Search Execution)
-  * File-URLs of search results can not be used as book mark -> they do not lead to the file content. 
   * URLS of search results should be provided that way, that they can be opened in a new tab
   * display .xml-files
   * display .pomfiles

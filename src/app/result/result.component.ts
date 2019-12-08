@@ -46,14 +46,17 @@ export class ResultComponent implements OnInit {
   	
   		this.uiModelResultList = new UiModelResultList();
   	}
-	
 
 	onSelectSearchResult( item : UiModelResultListItem ) : void {
 	  	var path = item.path;
 	  	var versionLabel = item.versionLabel;
 	  	var fileName = item.simpleFilename;
 	  	
-	  	this.router.navigate(["/detail", {p:path, f: fileName, v: versionLabel } ]);
+	  	this.router.navigate(["/detail", {p:this.encodeWindowsPathToNormalizedPath(path), f: fileName, v: versionLabel } ]);
+	}
+	
+	encodeWindowsPathToNormalizedPath(path):String {
+		return path.replace(/\\/g, '/');
 	}
 
 }
