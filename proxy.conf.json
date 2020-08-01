@@ -1,10 +1,9 @@
 {
-  "/api/*": {
-    "target": "http://localhost:8080/",
+  "/SearchBackend/*": {
+    "target": "http://localhost:8000/",
     "secure": false,
     "pathRewrite": {
-      "^/api/query/": "/SearchBackend/rest/search/",
-      "^/api/cached/": "/SearchBackend/rest/cached/"
+      "^/SearchBackend/rest/": "/SearchBackend/rest/"
     },
     "changeOrigin": false,
     "logLevel": "debug"

@@ -11,11 +11,12 @@ import { BackendModelQueryResult } from './search-model/backend-model-query-resu
 })
 export class SearchBackendService {
 
-	private _cachedFileContentsLocation = "/api/cached/content";
-	private _queryResultsLocation = "/api/query/result";
+	private _cachedFileContentsLocation = "/SearchBackend/rest/cached/content";
+	private _queryResultsLocation = "/SearchBackend/rest/search/result";
 
 	constructor( private httpClient : HttpClient ) { }
   
+
 	getFileContent ( path : string, filename : string ) : Observable<string> {
 	    let httpParameters = new HttpParams();
 	    httpParameters=httpParameters.append('p', path);
