@@ -17,8 +17,8 @@ import { UiModelFileMetaData } from './ui-model/ui-model-file-meta-data';
 })
 export class DetailComponent implements OnInit {
 
-	private fileMetaData : UiModelFileMetaData;
-	private fileContent : UiModelFileContent;
+	public fileMetaData : UiModelFileMetaData;
+	public fileContent : UiModelFileContent;
 
 	constructor( private activatedRoute : ActivatedRoute , private searchBackend : SearchBackendService , private m2m : Model2ModelService ) {
 		this.fileMetaData = new UiModelFileMetaData("","");

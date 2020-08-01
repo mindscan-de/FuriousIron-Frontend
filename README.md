@@ -84,6 +84,10 @@ So my focus is not the search engine as a product, but is the enabler for the mo
 
 Run this SearchFrontend via `ng serve --proxy-config=proxy.conf.json` then visit http://localhost:4200
 
+## Building
+
+`ng build --base-href=/SearchBackend/frontend/`
+
 ## License
 
 Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.

@@ -8,7 +8,7 @@ import { ActivatedRoute, Router} from '@angular/router';
 })
 export class SearchSubmitComponent implements OnInit {
 
-	private currentQueryString: string = "";
+	public currentQueryString: string = "";
 	
 	constructor( private activatedRoute: ActivatedRoute, private router: Router ) { 
   		// subscribe to page parameters		

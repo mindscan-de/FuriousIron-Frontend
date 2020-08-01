@@ -13,25 +13,7 @@ import { DetailComponent } from './detail/detail.component';
 /**
  * Declare the languages to highlight
  */
-import { HighlightModule } from 'ngx-highlightjs';
-import css from 'highlight.js/lib/languages/css';
-import java from 'highlight.js/lib/languages/java';
-import json from 'highlight.js/lib/languages/json';
-import markdown from 'highlight.js/lib/languages/markdown';
-import typescript from 'highlight.js/lib/languages/typescript';
-import xml from 'highlight.js/lib/languages/xml';
-
-
-export function supportedHighlightJsLanguages() {
-	return [
-	    {name: 'css', func: css},
-	    {name: 'java', func: java},
-	    {name: 'json', func: json},
-	    {name: 'markdown', func: markdown},
-	    {name: 'typescript', func: typescript},
-	    {name: 'xml', func: xml}
-	];
-}
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [
@@ -46,12 +28,16 @@ export function supportedHighlightJsLanguages() {
     FormsModule,
     HttpClientModule,    
     AppRoutingModule,
-    HighlightModule.forRoot({
-      languages: supportedHighlightJsLanguages
-    })
-    
+    HighlightModule    
   ],
-  providers: [],
+  providers: [
+	{
+		provide: HIGHLIGHT_OPTIONS,
+		useValue: {
+/* 		fullLibraryLoader: () => import('highlight.js'), */
+		}
+	}
+	],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
