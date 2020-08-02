@@ -16,7 +16,7 @@ import { UiModelResultListItem } from './ui-model/ui-model-result-list-item';
 })
 export class ResultComponent implements OnInit {
 
-	private uiModelResultList: UiModelResultList;
+	public uiModelResultList: UiModelResultList;
 
 	constructor( private activatedRoute : ActivatedRoute, private router : Router, private searchBackend : SearchBackendService , private m2m : Model2ModelService ) {
 		this.uiModelResultList = new UiModelResultList();

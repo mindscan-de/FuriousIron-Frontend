@@ -21,9 +21,9 @@
 			<p class="mb-1"> 
 			{{searchResult.teaserText}}
 			</p>
-			<span class="badge badge-pill badge-secondary">{{searchResult.numberOfLines}} Lines </span>
-			<span class="badge badge-pill badge-light">{{searchResult.fileSize}} Byte </span>
-			<span *ngIf="searchResult.classifierMap['unit-test']=='true'" class="badge badge-pill badge-warning">unittest</span>
+			<span class="badge badge-secondary">{{searchResult.numberOfLines}} Lines </span>
+			<span class="badge badge-light">{{searchResult.fileSize}} Byte </span>
+			<span *ngIf="searchResult.classifierMap['unit-test']=='true'" class="badge badge-warning">unittest</span>
 		</li>	
 		
 	</ul>
