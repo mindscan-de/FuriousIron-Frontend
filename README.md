@@ -63,11 +63,7 @@ if there is a simpler solution/way. That helps to lower the technical was well a
   
 * Backend
   * caching of the query (until next index-creation or day) and its results should be implemented (frontend and backend)- allows smooth going forth and back in the results and allows pagination of results   
- 
-* (Indexer)
-  * Indexing .xml files
-  * Indexing .pom files (Indexer)
-  
+
 ## Nice to have
 
 I consider the search engine a byproduct for the real use-case. The search-engine should collect data about
