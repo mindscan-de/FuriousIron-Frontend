@@ -1,7 +1,8 @@
 # FuriousIron-Frontend
 
 FuriousIron-Frontend is a very simple search engine frontend. At the moment this is a completely 
-private educational project and not fit for any purpose whatsoever.
+private educational project and not fit for any purpose whatsoever. There might be a day, when I
+will take it into production in some company, if nothing similar is available.
 
 ## The Idea
 
@@ -44,7 +45,7 @@ having the whole pipeline running as soon as possible, even if it lacks features
 I also like to defer unnecessary architectural decisions as long they do not need attention. So please
 do not expect me to provide a full architecture, or a full grown idea. It will either evolve or die.
 
-That said, please remember this is a private educational project.
+That said, please remember this is a completely private educational project.
 
 ## Constraints
 
@@ -62,11 +63,12 @@ if there is a simpler solution/way. That helps to lower the technical was well a
   * display METAINF.MFs
   
 * Backend
-  * caching of the query (until next index-creation or day) and its results should be implemented (frontend and backend)- allows smooth going forth and back in the results and allows pagination of results   
+  * caching of the query (until next index-creation or day) and its results should be implemented (frontend and backend)- allows smooth going forth and back in the results and allows pagination of results 
+  
 
 ## Nice to have
 
-I consider the search engine a byproduct for the real use-case. The search-engine should collect data about
+I consider the search engine a byproduct for the real use-case. The search-engine should collect data about 
 the source-code the user is looking for and should enable further technologies to help the user programming,
 refactoring or debugging.
 
