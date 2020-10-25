@@ -14,7 +14,6 @@ import { DetailComponent } from './detail/detail.component';
  * Declare the languages to highlight
  */
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { AnnotateComponent } from './annotate/annotate.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { AnnotateComponent } from './annotate/annotate.component';
     SearchComponent,
     SearchSubmitComponent,
     ResultComponent,
-    DetailComponent,
-    AnnotateComponent
+    DetailComponent
   ],
   imports: [
     BrowserModule,
