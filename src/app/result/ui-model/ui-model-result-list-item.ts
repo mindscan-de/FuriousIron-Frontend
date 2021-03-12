@@ -8,9 +8,9 @@ export class UiModelResultListItem {
 	public fileSize: number;
 	public classifierMap: Map<string, string>;
 	
-	constructor(simpleFilename: string, path:string, numberOfLines:number, fileSize:number, classifierMap:Map<string,string>) {
+	constructor(simpleFilename: string, path:string, numberOfLines:number, fileSize:number, classifierMap:Map<string,string>, teaserText:string) {
 		this.simpleFilename = simpleFilename;
-		this.teaserText = "query = 'foo' this is a simple teaser, but be sure to click on that item, if you find this description useful.";
+		this.teaserText = (teaserText != null) ? teaserText : "query = 'foo' this is a simple teaser, but be sure to click on that item, if you find this description useful.";
 		this.versionLabel = "current";
 		this.path = path;
 		this.numberOfLines = numberOfLines;
