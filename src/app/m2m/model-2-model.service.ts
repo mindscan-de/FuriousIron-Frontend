@@ -23,6 +23,8 @@ export class Model2ModelService {
 		var uiResult = new UiModelResultList ();
 		
 		uiResult.numberOfItems = queryResult.numberOfQeueryResults;
+		uiResult.searchTimeInMilliseconds = queryResult.searchTimeInMillis;
+		
 		for( let queryItem of queryResult.queryResultItems ) {
 			var simpleFilename = queryItem.queryResultSimpleFilename;
 			var path = queryItem.queryResultFilePath;
