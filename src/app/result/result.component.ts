@@ -59,4 +59,7 @@ export class ResultComponent implements OnInit {
 		return path.replace(/\\/g, '/');
 	}
 
+	asIsOrder(a, b) {
+	  return a.key - b.key;
+	}
 }

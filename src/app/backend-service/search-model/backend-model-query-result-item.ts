@@ -6,8 +6,7 @@ export class BackendModelQueryResultItem {
 	public fileSize: number;
 	public classifierMap: Map<string, string>;
 	
-	public queryResultTeaserText: string;
 	public queryResultVerInformation: string;
 	
-
+	public preview: Map<number,string>;
 }
