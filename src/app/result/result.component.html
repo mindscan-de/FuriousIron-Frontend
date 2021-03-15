@@ -18,9 +18,14 @@
 		<li *ngFor="let searchResult of uiModelResultList.items; let i = index" class="list-group-item list-group-item-action" (click)="onSelectSearchResult(searchResult)" >
 			<span class="badge badge-success">{{searchResult.versionLabel}}</span><span class="small p-3 mb-2 text-secondary">{{searchResult.path}}</span>
 			<h5 class="mb-1">{{searchResult.simpleFilename}}</h5>
-			<p *ngFor="let entry of searchResult.preview | keyvalue: asIsOrder " class="mb-1"> 
-			Line: {{entry.key}} : {{entry.value}}
-			</p>
+			<table class="table">
+				<tbody>
+					<tr *ngFor="let entry of searchResult.preview | keyvalue: asIsOrder ">
+						<th><code>{{entry.key}}</code></th>
+						<td><code>{{entry.value}}</code></td>
+					</tr>
+				</tbody>
+			</table>
 			
 			<span class="badge badge-secondary">{{searchResult.numberOfLines}} Lines </span>
 			<span class="badge badge-light">{{searchResult.fileSize}} Byte </span>
