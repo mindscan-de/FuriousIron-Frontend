@@ -23,7 +23,7 @@
     "@types/highlight.js": "^9.12.4",
     "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
-    "highlight.js": "^10.3.1",
+    "highlight.js": "^10.7.2",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
     "ngx-bootstrap": "^6.1.0",
