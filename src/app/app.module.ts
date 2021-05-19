@@ -37,15 +37,15 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 		provide: HIGHLIGHT_OPTIONS,
 		useValue: {
 			fullLibraryLoader: () => import('highlight.js'),
-/*	        coreLibraryLoader: () => import('highlight.js/lib/highlight'),
+/*	        coreLibraryLoader: () => import('highlight.js/lib/highlight.js'),
 	        lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
 	        languages: {
-	          typescript: () => import('highlight.js/lib/languages/typescript'),
-	          css: () => import('highlight.js/lib/languages/css'),
-	          xml: () => import('highlight.js/lib/languages/xml'),
-			  java: () => import('highlight.js/lib/languages/java'),
-			  json: () => import('highlight.js/lib/languages/json'),
-			  markdown: () =>import('highlight.js/lib/languages/markdown')
+	          typescript: () => import('highlight.js/lib/languages/typescript.js'),
+	          css: () => import('highlight.js/lib/languages/css.js'),
+	          xml: () => import('highlight.js/lib/languages/xml.js'),
+			  java: () => import('highlight.js/lib/languages/java.js'),
+			  json: () => import('highlight.js/lib/languages/json.js'),
+			  markdown: () =>import('highlight.js/lib/languages/markdown.js')
 	}
 */			
 		}
