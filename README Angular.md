@@ -1,3 +1,5 @@
+  
+
 # FuriousIron-Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
@@ -25,3 +27,27 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Preliminaries 
+
+## Get NodeJS
+
+Get Node 12.22.12 (win 7 compatible)
+
+## Install a rediculous old version of angular
+
+then 
+	`npm install -g @angular/cli@13.3.11`
+
+## install dependencies
+
+then
+	`npm install
+	
+## compile the project
+	
+do not compile this project on a network-share (mounted windows) - it just fails....
+
+This project configuration is **slightly** outdated, anyways it is what it is - currently i don't need it newer. It just works this way.
+
+-----------------------
